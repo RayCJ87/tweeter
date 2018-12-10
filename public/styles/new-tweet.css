@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  top: 0px;
+}
+
+.container .new-tweet {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 2px;
+  border-color: lightgrey;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #F0F0F0;
+  width: 386px;
+  height: 150px;
+/*  position: relative;
+  top: 40px;
+  left: 2em;
+  right: 2em;*/
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  top: 40px;
+
+}
+
+.container .block1 {
+  display: block;
+  height: 1px;
+  width: 360px;
+  border-top: 2px solid;
+  position: relative;
+  top: 40px;
+  left: 11px;
+}
+
+
+.container .counter {
+  position: relative;
+  bottom: 5px;
+  left: 280px;
+}
+
+h2 {
+  position: relative;
+  top:-10px;
+  padding-left: 13px;
+}
+
+
+textarea {
+  padding-top: 5px;
+  padding-left: 5px;
+  width: 360px;
+  position: relative;
+  bottom: 5px;
+  left: 11px;
+
+}
+
+input[type="submit"] {
+  position: relative;
+  left: 11px;
+  bottom: 5px;
+
+}
