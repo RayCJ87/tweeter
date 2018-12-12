@@ -20,6 +20,13 @@ body {
   background-color: #eee;
 }
 
+.container{
+  width: 450px;
+  background-color: white;
+  position: relative;
+  margin: auto;
+  height: 2500px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

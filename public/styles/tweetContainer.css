@@ -1,0 +1,107 @@
+.container {
+  width: 450px;
+  height: 3000px;
+}
+
+article {
+  background-color: #f2f2f2;
+  position: relative;
+  top:42px;
+  margin: auto;
+  margin-top:10px;
+  height: 300px;
+  width: 386px;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 2px;
+  border-color: lightgrey;
+  border-radius: 5px 5px 5px 5px;
+  opacity: 0.7;
+}
+
+.logo{
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+.header {
+  color: black;
+  position: relative;
+  margin-bottom: 0px;
+  margin-left: 100px;
+  top: -40px;
+  font-size: medium;
+}
+
+.nameLink {
+  position: relative;
+  top: -60px;
+  right: -300px;
+  font-size: small;
+}
+
+.tweetContent {
+  word-wrap: break-word;
+  white-space: normal;
+  background-color: white;
+  position: relative;
+  top: -35px;
+  height: 200px;
+  width: 382px;
+  line-height: 40px;
+}
+
+.footer{
+  background-color: white;
+  display: flex;
+  height: 53px;
+  width: 382px;
+  border-top: 2px solid;
+  border-color: #f2f2f2;
+  position: absolute;
+  top: 242px;
+  z-index: 10;
+}
+
+.timeInfo {
+  float: left;
+  color: grey;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+
+article:hover {
+  border-color: darkgrey;
+  opacity: 1.2;
+
+}
+
+article:hover img{
+  opacity: 1.2;
+
+}
+
+.flag {
+  /*float: right;*/
+  position: absolute;
+  right:  50px;
+  opacity: 0;
+}
+
+.retweet {
+  position: absolute;
+  right:  30px;
+  opacity: 0;
+}
+
+.heart {
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+}
+
+
+

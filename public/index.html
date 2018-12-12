@@ -10,14 +10,26 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/tweetContainer.css" type="text/css" />
+
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+
   </head>
 
   <body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
@@ -27,7 +39,43 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <section class="new-tweet">
+        <div class="block1"></div>
+        <h2>Compose Tweet</h2>
+        <form>
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+
+      <section class="tweetContainer">
+        <article>
+          <img class="logo" src="/images/PacMan.png" width="80px" height="80px">
+          <span class="header">Todd</span>
+          <span class="nameLink">@Todd4</span>
+          <div>
+          <p class="tweetContent">
+            I love coke!
+          </p>
+          </div>
+          <div class="footer">
+            <span class="timeInfo">5 days ago</span>
+            <img class="flag" src="/images/flag.png" width="20px" height="20px">
+            <img class="retweet" src="/images/retweet.png" width="20px" height="20px">
+            <img class="heart" src="/images/heart.png" width="20px" height="20px">
+          </div>
+        </article>
+      </section>
+
+
     </main>
 
+    <script>
+      document.addEventListener("dblclick", (event) => {
+        console.log(event, event.clientX, event.clientY);
+      });
+    </script>
   </body>
 </html>
