@@ -1,7 +1,7 @@
-.container {
+/*.container {
   position: relative;
   top: 0px;
-}
+}*/
 
 .container .new-tweet {
   display: flex;
@@ -10,18 +10,31 @@
   border-width: 2px;
   border-color: lightgrey;
   border-radius: 5px 5px 5px 5px;
-  background-color: #F0F0F0;
   width: 386px;
   height: 150px;
-/*  position: relative;
-  top: 40px;
-  left: 2em;
-  right: 2em;*/
+  background-color: #F0F0F0;
   margin-left: 2em;
   margin-right: 2em;
+  margin-bottom: 20px;
   position: relative;
   top: 40px;
 
+}
+
+.container .new-tweet .errorMes {
+  color: red;
+  font-weight: bold;
+  width: 380px;
+  background-color: #ffb6c1;
+  display: none;
+  z-index: 5;
+  position: absolute;
+  height: 40px;
+  margin: auto;
+  top: -40px;
+  padding-left: 15px;
+  padding-top: 3px;
+  border-radius: 10px;
 }
 
 .container .block1 {
@@ -33,7 +46,6 @@
   top: 40px;
   left: 11px;
 }
-
 
 .container .counter {
   position: relative;
