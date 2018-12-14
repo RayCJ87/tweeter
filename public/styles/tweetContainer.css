@@ -20,7 +20,6 @@
 
 .tweet header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background-color: #F0F0F0;
   border: 0 solid lightgrey;
@@ -30,24 +29,28 @@
 
 .tweet figure {
   display: flex;
-  align-items: center;
   margin: 0;
 }
 
 .logo {
-  height: 60px;
-  margin-right: 10px;
-  width: 60px;
+  height: 50px;
+  margin: 10px;
+  width: 50px;
+  border-radius: 5px;
 }
 
 .tweet figcaption {
   color: black;
-  margin-bottom: 0px;
   font-size: medium;
+  font-weight: bold;
+  margin-top: 10px;
+  align-items: flex-start;
 }
 
 .nameLink {
+  align-items: flex-start;
   font-size: small;
+  margin-top: 13px;
 }
 
 .tweetContent {
@@ -62,7 +65,6 @@
   display: flex;
   height: 53px;
   width: 382px;
-  /*justify-content: space-around;*/
   border-top: 2px solid #f2f2f2;
 }
 
@@ -87,22 +89,22 @@ article:hover img{
 
 .flag {
   margin-top: 3px;
-  position: relative;
-  right:  -55px;
+  position: absolute;
+  right:  90px;
   opacity: 0;
 }
 
 .retweet {
   margin-top: 3px;
-  position: relative;
-  right:  -60px;
+  position: absolute;
+  right:  70px;
   opacity: 0;
 }
 
 .heart {
   margin-top: 3px;
-  position: relative;
-  right:  -65px;
+  position: absolute;
+  right:  50px;
   opacity: 0;
 }
 

@@ -1,15 +1,12 @@
-/*.container {
-  position: relative;
-  top: 0px;
-}*/
 
 .container .new-tweet {
+  visibility: visible;
   display: flex;
   flex-direction: column;
   border-style: solid;
   border-width: 2px;
   border-color: lightgrey;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
   width: 386px;
   height: 150px;
   background-color: #F0F0F0;
@@ -18,7 +15,6 @@
   margin-bottom: 20px;
   position: relative;
   top: 40px;
-
 }
 
 .container .new-tweet .errorMes {
@@ -74,5 +70,4 @@ input[type="submit"] {
   position: relative;
   left: 11px;
   bottom: 5px;
-
 }

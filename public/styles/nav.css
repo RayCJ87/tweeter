@@ -15,37 +15,63 @@
 #nav-bar .logo{
   width: 80px;
   height: 80px;
-  float: left;
-
+  position: relative;
+  left: 10px;
+  bottom: 5px;
 }
 
 #nav-bar #toggle{
   position: relative;
+  border-color: black;
   margin-right: 10px;
-  margin-left: 500px;
+  margin-left: 720px;
   margin-top: 20px;
   margin-bottom: 40px;
-  width: 120px;
-  height: 40px;
-  border-radius: 20px 20px 20px 20px;
-  color: green;
-  background-color: #98FB98;
+  width: 150px;
+  height: 44px;
+  border-radius: 5px;
+  border-width: 1.3px;
+  color: #00a087;
+  background-color: #C3EAE8;
+}
+
+#nav-bar #toggle figure {
+  display: flex;
+  width: 100px;
+  height: 20px;
+}
+
+#nav-bar img {
+  width:  auto;
+  height: 170%;
+  top:-15px;
+  left: -35px;
+  position: relative;
+}
+
+#nav-bar #toggle .toggleContent{
+  font-size: 125%;
+  opacity: : 0.1;
+  position: relative;
+  left: -30px;
+  top: -5px;
 }
 
 #nav-bar #toggle:hover {
   color: black;
   background-color: white;;
+  -webkit-filter: grayscale(1);
 }
 
 #nav-bar .header{
   padding-bottom: 0px;
   padding-top: 0px;
-  padding-left: 10px;
+  padding-left: 5px;
   padding-right: 0px;
   float: left;
   height: 80px;
   color: white;
   font-size: larger;
-  line-height: 100px;
+  line-height: 115px;
 }
 

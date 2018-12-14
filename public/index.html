@@ -24,12 +24,16 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
-      <button id="toggle" onClick ="composeSwitch()"> <img src="/images/compose.png" width="15px" height="15px"/> Compose </button>
+      <button id="toggle" onClick ="composeSwitch()">
+        <figure>
+          <img src="/images/compose.png"/>
+          <figcaption class="toggleContent">Compose</figcaption>
+        </figure>
+      </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <section class="new-tweet">
         <div class="block1"></div>
         <h2>Compose Tweet</h2>
@@ -40,11 +44,8 @@
         </form>
         <div class="errorMes"></div>
       </section>
-
       <section class="tweetContainer">
       </section>
-
-
     </main>
   </body>
 </html>

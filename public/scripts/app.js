@@ -6,18 +6,14 @@
 
 
 function composeSwitch(){
-  // $('.container .new-tweet').slideToggle("slow");
   $('.container .new-tweet').slideToggle(100);
   if ($('.container .new-tweet').is(":visible")){
     $('.container .new-tweet form textarea').select();
   }
 }
 
-
 function loadTweets(){
-
   var tweetsArray = $.ajax({url: "/tweets" , method: 'GET'});
-
   tweetsArray.done(function(tweetsArray) {
     $('.tweetContainer').empty();
     var theTweets = tweetsArray.reverse();
@@ -33,10 +29,8 @@ function escape(str){
 
 function postTweet() {
   var $input = $("input[type='submit']");
-  // var tw = $(newTweet);
   $input.on('click', function(event){
     var newTweet = $(".container .new-tweet form").serialize();
-
     event.preventDefault();
     if ($('textarea').val().length === 0){
       $('.container .new-tweet .errorMes').text('   Warning!!  Please type something!  ');
@@ -48,15 +42,18 @@ function postTweet() {
     }
     else{
           $('.container .new-tweet .errorMes').slideUp();
+
           console.log("We got a new submit, let's start Ajax!");
           $.ajax({ url: "/tweets/", data: newTweet, method: 'POST' }).then(function(newTweet){
             console.log("Here is a new Tweet!");
             loadTweets();
+            $('textarea').val('');
+            var reloadCounter = document.querySelector('.counter');
+            reloadCounter.innerHTML = 140;
           });
     }
   });
 };
-
 
 function renderTweets(tweets){
   for (let tweet of tweets) {
@@ -65,11 +62,37 @@ function renderTweets(tweets){
   }
 }
 
+// convert numbers to proper time format and get proper time difference from today
+function getPostTime(poTime){
+  var today = new Date();
+  var poDate = new Date(poTime);
+  var diffTime = Math.floor((today - poDate) / 1000);
+  var ans;
+  if (diffTime < 60) {
+    if (diffTime < 2){ return (`${(diffTime)} second ago`);}
+    return (`${(diffTime)} seconds ago`);
+  }
+  else if (diffTime <3600) {
+     var ans = Math.floor(diffTime / 60);
+     if (ans === 1) { return (`${ans} minute ago`); }
+     return (`${ans} minutes ago`);
+    }
+  else if (diffTime < 86400) {
+    var ans = Math.floor(diffTime / 3600);
+    if (ans === 1) { return (`${ans} hour ago`); }
+    return (`${ans} hours ago`);
+  }
+  else {
+    var ans = Math.floor(diffTime / 86400);
+    if (ans === 1){ return (`${ans} day ago`); }
+    return (`${ans} days ago`);
+  }
+}
+
 
 function createTweetElement(tweet){
-  // console.log(tweet)
   var dateObj = tweet.created_at;
-  var theDate = new Date(1000*dateObj);
+  var timeRecord = getPostTime(dateObj);
   var article = `
         <article classs="tweet">
         <header>
@@ -82,7 +105,7 @@ function createTweetElement(tweet){
         <p class="tweetContent">${escape(tweet.content.text)}
         </p>
         <div class="footer">
-          <span class="timeInfo">${theDate.toGMTString()}</span>
+          <span class="timeInfo">${timeRecord}</span>
           <img class="flag" src="/images/flag.png" width="20px" height="20px">
           <img class="retweet" src="/images/retweet.png" width="20px" height="20px">
           <img class="heart" src="/images/heart.png" width="20px" height="20px">
@@ -144,6 +167,7 @@ const data = [
 
 // console.log($tweet);
 $( document ).ready(function() {
+  $('.container .new-tweet').hide();
   loadTweets();
   postTweet();
 
