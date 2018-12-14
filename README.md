@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of Tweeter]https://github.com/RayCJ87/tweeter/blob/master/screenshot%20-%20tweeter.png
-!["Screenshot of making a new tweet]https://github.com/RayCJ87/tweeter/blob/master/screenshot%20-%20newTweet.png
+!["Screenshot of Tweeter](https://github.com/RayCJ87/tweeter/blob/master/screenshot%20-%20tweeter.png)
+!["Screenshot of making a new tweet](https://github.com/RayCJ87/tweeter/blob/master/screenshot%20-%20newTweet.png)
 
 ## Getting Started
 
